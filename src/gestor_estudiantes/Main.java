@@ -11,11 +11,15 @@ public class Main {
             int opcion;
             
             do {
-                System.out.println("\n=== SISTEMA DE GESTION DE ESTUDIANTES ===");
+                System.out.println("\n---------------------------------------------------");
+                System.out.println("                  EDUNOVA                          ");
+                System.out.println("---------------------------------------------------");
+                System.out.println("==== SISTEMA DE GESTION DE ESTUDIANTES ====");
                 System.out.println("1. Registrar nuevo estudiante");
-                System.out.println("2. Ingresar notas de los 5 cursos a un estudiante");
-                System.out.println("3. Buscar y mostrar reporte de un estudiante por matricula");
+                System.out.println("2. Ingresar notas del estudiante");
+                System.out.println("3. Buscar y mostrar reporte de un estudiante");
                 System.out.println("4. Salir");
+                System.out.println("---------------------------------------------------");
                 System.out.print("Seleccione una opcion: ");
                 
                 while (!scanner.hasNextInt()) {
@@ -45,7 +49,7 @@ public class Main {
                         
                         Estudiante nuevoEstudiante = new Estudiante(nombre, edad, matricula);
                         listaEstudiantes.add(nuevoEstudiante);
-                        System.out.println("¡Estudiante registrado con exito!");
+                        System.out.println("Estudiante registrado con exito!");
                     }
                         
                     case 2 -> {
@@ -87,7 +91,7 @@ public class Main {
                                     notaValida = estParaNotas.agregarNota(nota);
                                 }
                             }
-                            System.out.println("¡Las 5 notas han sido registradas exitosamente!");
+                            System.out.println("Las 5 notas han sido registradas exitosamente!");
                         } else {
                             System.out.println("Estudiante con matricula '" + matBuscarNota + "' no encontrado.");
                         }
@@ -117,7 +121,7 @@ public class Main {
                         }
                     }
                         
-                    case 4 -> System.out.println("\nSaliendo del sistema. ¡Hasta luego!");
+                    case 4 -> System.out.println("\nSaliendo del sistema. Hasta luego!");
                         
                     default -> System.out.println("\nOpcion invalida. Intente de nuevo.");
                 }
